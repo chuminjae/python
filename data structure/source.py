@@ -1,14 +1,3 @@
-a = 3
-b = 4
-aa = 3.14
-aa = round(aa, 1) # aa = 3.1
-print(a/b) # 나눗셈
-print(a//b) # 몫
-print(a%b)
-print(a*b)
-print(a**b) # 거듭제곱
-print("\'Hello\'") #'Hello'
-print("print(\"Hello\\nWorld\")") #print("Hello World")
 c = list()
 c = []
 c = [1,2,3,4,5]
