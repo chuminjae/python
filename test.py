@@ -1,1 +1,4 @@
-a,b = int(input().split(" "))
+a,b = input().split(" ")
+a = bool(int(a))
+b = bool(int(b))
+print(not (a and b))
