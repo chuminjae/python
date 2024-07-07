@@ -2,6 +2,12 @@ c = list()
 c = []
 c = [1,2,3,4,5]
 print(c[-1]) #뒤에서 첫번째 원소 출력
+c = [0] * 13 # 리스트 초기화
+# 거꾸로 출력
+a = int(input())
+b = input().split()
+for i in range(a-1, -1, -1):
+    print(b[i], end =" ")
 array = [i for i in range(20) if i %2 == 1] # 0에서 19까지 홀수 배열 생성
 array = [i * i for i in range(1,20) if i*i != 361]
 print(array[1:4]) #index 1번째 원소부터 3번째 원소까지
@@ -11,6 +17,12 @@ m = 4
 # 특정한 크기를 가지는 2차원 배열은 무조건 리스트 컴프리헨션을 사용해야한다.
 array=[[0] * n for _ in range(m)]
 print(array)
+# 2차원 입력 받는 법
+b = [[0] * 19 for _ in range(19)]
+for i in range(19):
+    b[i]=list(map(int, input().split()))
+# 1차원 배열 입력
+    b=list(map(int, input().split()))
 a = [1,2,3,4,5]
 a.append(6) #6 삽입
 a.sort() #오름차순 nlogn
