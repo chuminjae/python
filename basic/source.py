@@ -113,3 +113,4 @@ def count_by_range(a, left_value, right_value):
 a = [1,2,3,4,4,4,5,6,7,8,9]
 print(count_by_range(4,4)) # 저 범위 내에 있는 숫자 개수 출력
 print(count_by_range(1,3)) # 저 범위 내에 있는 숫자 개수 출력
+

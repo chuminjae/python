@@ -69,6 +69,9 @@ data.update([5,6]) #5 6 추가 대괄호 넣을것
 data.remove(3) #3 삭제
 
 # heapq - 최소 힙트리
+# h가 최소 힙트리 구조를 가지고 있음
+# 이미 리스트가 존재한다면 heaq.heapify(list)
+# heaq.heappop(h) --> 가장 작은 원소 제거 return
 import heapq
 def heapsort(iterable):
     h = []
@@ -82,3 +85,50 @@ def heapsort(iterable):
     return result
 result = heapsort([1,3,5,7,9,2,4,6,8,0])
 print(result)
+
+#heapq - 최대 힙트리
+import heapq
+def heapsort(iterable):
+    h = []
+    result = []
+    for value in iterable:
+        heapq.heappush(h, -value)
+    for _ in range(len(h)):
+        print(h[i])
+    for _ in range(len(h)):
+        result.append(-heapq.heappop(h))
+    return result
+result = heapsort([1,3,5,7,9,2,4,6,8,0])
+print(result)
+
+
+# collections
+# deque 인덱싱 슬라이싱 불가
+# 하지만 맨앞, 뒤에 삽입이나 삭제는 효과적
+# 첫번쨰 원소 제거는 popleft() 삽입은 appendleft(x), 맨뒤 원소 제거는 pop() 삽입은 append(x)
+from collections import deque
+data=deque([2,3,4])
+data.appendleft(1)
+data.append(4)
+print(data) #deque(1,2,3,4,4)
+print(list(data)) # [1,2,3,4,4]
+
+# couter 등장횟수를 센다
+from collections import Counter
+data = Counter(['red', 'blue', 'red', 'brown'])
+print(data['blue'])
+print(data['brown'])
+print(dict(data)) # 사전 자료형으로 변환
+
+# math
+import math
+print(math.factorial(5))
+print(math.sqrt(7)) #루트 7
+print(math.gcd(21,14)) # greatest common diviser
+print(math.pi)
+print(math.e)
+
+
+
+
+
