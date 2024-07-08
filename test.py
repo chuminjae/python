@@ -1,24 +1,11 @@
-c = [[0] * 10 for _ in range(10)]
-for i in range(10):
-    c[i]=list(map(int, input().split()))
-i = 1
-j = 1
-while c[i][j] != 2:
-    if(c[i][j] == 0):
-        c[i][j] = 9
-    if((i == 9 and j == 9) or (c[i][j + 1] == 1)and c[i+1][j] == 1):
-        break
-    if(c[i][j + 1] != 1):
-        j += 1
-        if(c[i][j] == 2):
-            c[i][j] = 9
-            break
-    elif(c[i + 1][j] != 1):
-        i += 1
-        if(c[i][j] == 2):
-            c[i][j] = 9
-            break
-for i in range(10):
-    for j in range(10):
-        print(c[i][j], end = " ")
-    print("")
+import heapq
+def heapsort(iterable):
+    h = []
+    result = []
+    for value in iterable:
+        heapq.heappush(h, value)
+    for i in range(len(h)):
+        print(h[i])
+    
+result = heapsort([1,3,5,7,9,2,4,6,8,0])
+print(result)
