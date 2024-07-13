@@ -25,8 +25,8 @@ for i in range(19):
     b=list(map(int, input().split()))
 a = [1,2,3,4,5]
 a.append(6) #6 삽입
-a.sort() #오름차순 nlogn
-a.sort(reverse = True) #내림차순 정렬
+a.sorted() #오름차순 nlogn
+a.sorted(reverse = True) #내림차순 정렬
 a.reverse() #리스트 원소 순서 반대로 n
 a.insert(2,3) #인덱스 2에 3추가 n
 a.count(3) #3인 원소의 개수 n

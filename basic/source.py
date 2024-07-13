@@ -1,6 +1,7 @@
 a = 3
 b = 4
 aa = 3.14
+aa = format(aa, ".2f")
 aa = round(aa, 1) # aa = 3.1
 print(a/b) # 나눗셈
 print(a//b) # 몫
@@ -8,7 +9,7 @@ print(a%b)
 print(a*b)
 print(a**b) # 거듭제곱
 print("\'Hello\'") #'Hello'
-print("print(\"Hello\\nWorld\")") #print("Hello World")
+print("print(\"Hello\\nWorld\")") #print("Hello\nWorld")
 a = input() # string으로 받아서 int or float으로 타입 변환 필요
 a = input().split(" ") #공백 기준 입력 받기
 # \n기준으로 안됨
@@ -33,7 +34,6 @@ add(b = 7, a = 3) # 이렇게 parameter 지정해서 넣어도됨
 
 #람다식 구현
 print((lambda a,b: a +b)(3,7))
-
 # global 변수
 a = 0
 def func():
